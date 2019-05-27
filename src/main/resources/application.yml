@@ -1,2 +1,18 @@
 server:
   port: 8484
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;
+    username: sa
+    password: ksnGAME*90
+
+logging:
+  level:
+    root: INFO
+    com.globeking: INFO
+    org.hibernate: ERROR
+    org.hibernate.SQL: DEBUG

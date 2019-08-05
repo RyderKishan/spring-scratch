@@ -14,7 +14,17 @@ public class UserService {
     this.userRepository = userRepository;
   }
 
-  public User saveUser(User user) {
+  public User addUser(User user) {
     return userRepository.save(user);
+  }
+
+  public User getUser(String id) {
+    return userRepository.getUserBySecId(id);
+  }
+
+  public Void deleteUser(String id) {
+    User toDelete = userRepository.getUserBySecId(id);
+    userRepository.deleteById(toDelete.getId());
+    return null;
   }
 }
